@@ -16,7 +16,6 @@ export const ProductCard: React.FC<ProductProps> = ({ item }) => {
     >
       <img src={item.imageUrl} alt={item.title} />
       <h3>{item.title}</h3>
-      <p className="description">{item.description}</p>
       <div className="price">{item.price} ₪</div>
     </div>
   );
