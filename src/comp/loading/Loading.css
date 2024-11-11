@@ -1,0 +1,57 @@
+.loading-container {
+    display: flex;
+    flex-direction: unset;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    gap: 1rem;
+}
+
+.loading-text {
+    font-size: 1.2rem;
+    color: #666;
+    letter-spacing: 0.1em;
+    animation: loadingDots 1.4s infinite;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+}
+
+.loading-spinner svg {
+    animation: rotate 1.4s linear infinite;
+}
+
+.loading-spinner circle {
+    stroke: #3b82f6; /* כחול, אפשר לשנות לצבע שמתאים לעיצוב שלך */
+    stroke-dasharray: 128;
+    stroke-dashoffset: 128;
+    animation: dash 1.4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 128;
+    }
+    50% {
+        stroke-dashoffset: 32;
+    }
+    100% {
+        stroke-dashoffset: 128;
+    }
+}
+
+@keyframes loadingDots {
+    0% { content: "Loading"; }
+    25% { content: "Loading."; }
+    50% { content: "Loading.."; }
+    75% { content: "Loading..."; }
+    100% { content: "Loading"; }
+}

@@ -1,0 +1,27 @@
+.mainPage {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px #b9b6b6;
+    border-radius: 9px;
+    margin-top: 20px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 45px;
+    padding: 45px;
+    direction: rtl;
+}
+
+.no-result {
+    text-align: center;
+    direction: rtl;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        place-self: center;
+    }
+}
